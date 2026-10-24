@@ -1,0 +1,6 @@
+{
+  "name": "UniNest - Boarding House Agent & Room Unlock",
+  "description": "Student boarding house discovery and verification platform with secure landlord contact unlocking, agent verification, and student accommodation listings.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
