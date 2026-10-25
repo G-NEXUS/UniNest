@@ -16,7 +16,25 @@
     <link rel="stylesheet" href="/css/index.css" />
   </head>
   <body class="bg-black text-blue-50 selection:bg-blue-600 selection:text-white min-h-screen">
-    <div id="root"></div>
+    <!--
+      Static page shell:
+      - HTML provides the document, app container, and no-JavaScript message.
+      - CSS provides the complete visual design and responsive layout.
+      - JavaScript fills #root with the data-driven student, landlord, and admin screens.
+    -->
+    <div id="app-shell">
+      <div id="root" aria-live="polite">
+        <!-- JavaScript replaces this loading message with the application screens. -->
+        <main class="min-h-screen bg-black text-white flex items-center justify-center">
+          <div class="w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full animate-spin" aria-label="Loading UniNest"></div>
+        </main>
+      </div>
+      <noscript>
+        <main class="min-h-screen bg-black text-white flex items-center justify-center p-6 text-center">
+          <p>UniNest needs JavaScript enabled to provide listings, role switching, filters, payments, and contact unlocking.</p>
+        </main>
+      </noscript>
+    </div>
     <script type="module" src="/js/index.js"></script>
   </body>
 </html>
