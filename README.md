@@ -1,6 +1,19 @@
 # UniNest — Boarding House Agent & Room Unlock Platform
 
-A modern framework-free web application built with **HTML**, **CSS**, **JavaScript**, **Vite**, and **Tailwind CSS**. It connects students with verified university boarding house rooms, protects landlord contacts until an agent unlock fee is paid, and provides landlords with an in-depth tenant and room occupancy management panel.
+A modern framework-free web application built with **HTML**, **CSS**, and **JavaScript**. It connects students with verified university boarding house rooms, protects landlord contacts until an agent unlock fee is paid, and provides landlords with an in-depth tenant and room occupancy management panel.
+
+## Simple File Layout
+
+The application code is intentionally organized into four easy-to-find locations:
+
+```text
+index.html       # The page structure and the application entrypoint
+js/index.js      # All application behavior, with explanatory comments
+css/index.css    # All compiled styles used by the existing interface
+assets/          # Images or other static files can be placed here
+```
+
+There is no React, JSX, TypeScript, or component framework in the application.
 
 ---
 
