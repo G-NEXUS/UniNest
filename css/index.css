@@ -2815,6 +2815,44 @@
   }
 }
 
+/* Explicit theme layer: preserves UniNest's black background and blue UI. */
+.ui-bg-black { background-color: #000; }
+.ui-bg-black-60 { background-color: rgba(0, 0, 0, .60); }
+.ui-bg-black-70 { background-color: rgba(0, 0, 0, .70); }
+.ui-bg-black-80 { background-color: rgba(0, 0, 0, .80); }
+.ui-bg-black-90 { background-color: rgba(0, 0, 0, .90); }
+.ui-bg-black-95 { background-color: rgba(0, 0, 0, .95); }
+.ui-bg-blue-500 { background-color: #3b82f6; }
+.ui-bg-blue-600 { background-color: #2563eb; }
+.ui-bg-blue-950 { background-color: #172554; }
+.ui-bg-blue-950-20 { background-color: rgba(23, 37, 84, .20); }
+.ui-bg-blue-950-30 { background-color: rgba(23, 37, 84, .30); }
+.ui-bg-blue-950-40 { background-color: rgba(23, 37, 84, .40); }
+.ui-bg-blue-950-50 { background-color: rgba(23, 37, 84, .50); }
+.ui-bg-blue-950-60 { background-color: rgba(23, 37, 84, .60); }
+.ui-bg-blue-950-70 { background-color: rgba(23, 37, 84, .70); }
+.ui-bg-blue-950-90 { background-color: rgba(23, 37, 84, .90); }
+.ui-bg-zinc-950 { background-color: #09090b; }
+.ui-text-white { color: #fff; }
+.ui-text-blue-50 { color: #eff6ff; }
+.ui-text-blue-100 { color: #dbeafe; }
+.ui-text-blue-200 { color: #bfdbfe; }
+.ui-text-blue-300 { color: #93c5fd; }
+.ui-text-blue-400 { color: #60a5fa; }
+.ui-text-blue-500 { color: #3b82f6; }
+.ui-border-blue-400 { border-color: #60a5fa; }
+.ui-border-blue-500 { border-color: #3b82f6; }
+.ui-border-blue-600 { border-color: #2563eb; }
+.ui-border-blue-800 { border-color: #1e40af; }
+.ui-border-blue-900 { border-color: #1e3a8a; }
+.ui-border-blue-950 { border-color: #172554; }
+.ui-border-blue-900-30 { border-color: rgba(30, 58, 138, .30); }
+.ui-border-blue-900-40 { border-color: rgba(30, 58, 138, .40); }
+.ui-border-blue-900-50 { border-color: rgba(30, 58, 138, .50); }
+.ui-border-blue-900-60 { border-color: rgba(30, 58, 138, .60); }
+.ui-border-blue-500-60 { border-color: rgba(59, 130, 246, .60); }
+.ui-border-blue-800-60 { border-color: rgba(30, 64, 175, .60); }
+
 /* Modal and dropdown animation helpers used by the JavaScript screens. */
 .ui-animate-in {
   animation: ui-fade-in 300ms ease both;
