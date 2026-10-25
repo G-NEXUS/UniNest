@@ -1,6 +1,6 @@
 # UniNest — Boarding House Agent & Room Unlock Platform
 
-A modern web application built with **React 19**, **Vite**, **TypeScript**, and **Tailwind CSS**. It connects students with verified university boarding house rooms, protects landlord contacts until an agent unlock fee is paid, and provides landlords with an in-depth tenant and room occupancy management panel.
+A modern framework-free web application built with **HTML**, **CSS**, **JavaScript**, **Vite**, and **Tailwind CSS**. It connects students with verified university boarding house rooms, protects landlord contacts until an agent unlock fee is paid, and provides landlords with an in-depth tenant and room occupancy management panel.
 
 ---
 
