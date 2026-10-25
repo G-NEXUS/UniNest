@@ -1,38 +1,1310 @@
 <!doctype html>
-<html lang="en" class="dark"><head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UniNest - Boarding House Agent &amp; Room Unlock</title>
-    <meta name="description" content="Student boarding house discovery and verification platform with secure landlord contact unlocking, agent verification, and student accommodation listings.">
-    <meta property="og:title" content="UniNest - Boarding House Agent &amp; Room Unlock">
-    <meta property="og:description" content="Student boarding house discovery and verification platform with secure landlord contact unlocking, agent verification, and student accommodation listings.">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="theme-color" content="#000000">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/index.css">
-  </head>
-  <body class="bg-black text-blue-50 selection:bg-blue-600 selection:text-white min-h-screen">
-    <!--
+<!DOCTYPE html>
+<html class="dark" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   UniNest - Boarding House Agent &amp; Room Unlock
+  </title>
+  <meta content="Student boarding house discovery and verification platform with secure landlord contact unlocking, agent verification, and student accommodation listings." name="description"/>
+  <meta content="UniNest - Boarding House Agent &amp; Room Unlock" property="og:title"/>
+  <meta content="Student boarding house discovery and verification platform with secure landlord contact unlocking, agent verification, and student accommodation listings." property="og:description"/>
+  <meta content="website" property="og:type"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="#000000" name="theme-color"/>
+  <link href="/css/index.css" rel="stylesheet"/>
+ </head>
+ <body class="bg-black text-blue-50 selection:bg-blue-600 selection:text-white min-h-screen">
+  <!--Static UniNest frontend: HTML provides the page, CSS provides the design, and no JavaScript is used.-->
+  <!--
       Static page shell:
       - HTML provides the document, app container, and no-JavaScript message.
       - CSS provides the complete visual design and responsive layout.
       - JavaScript fills #root with the data-driven student, landlord, and admin screens.
     -->
-    <div id="app-shell">
-      <div id="root" aria-live="polite" aria-label="UniNest static frontend"><div class="min-h-screen bg-black text-blue-50 flex flex-col font-sans selection:bg-blue-600 selection:text-white"><header class="sticky top-0 z-40 bg-black/95 backdrop-blur-md border-b border-blue-900/40"><div class="bg-gradient-to-r from-blue-950 via-blue-900 to-black text-blue-200 text-[11px] sm:text-xs py-1.5 px-3 sm:px-4 text-center border-b border-blue-800/30 flex items-center justify-center gap-1.5"><svg class="w-3.5 h-3.5 text-blue-400 shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg><span class="truncate"><strong class="text-white">CBU Student Safety:</strong> Inspect room physically before paying rent. Unlock fee is only <strong>K25</strong>.</span></div><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="flex items-center justify-between h-16 sm:h-20"><div class="flex items-center gap-3"><a href="#" class="flex items-center gap-2.5 sm:gap-3 group"><div class="relative flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-tr from-blue-700 via-blue-600 to-blue-400 text-white shadow-lg shadow-blue-600/30 ring-1 ring-blue-400/40 group-hover:scale-105 transition-transform"><svg class="w-5 h-5 sm:w-6 sm:h-6 text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 21 9.6-9.6"></path><path d="m7.5 15.5 2.3 2.3a1 1 0 0 1 0 1.4l-2.1 2.1a1 1 0 0 1-1.4 0L4 19"></path><circle cx="15.5" cy="7.5" r="5.5"></circle></svg><div class="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-blue-500 border-2 border-black flex items-center justify-center"><svg class="w-2.5 h-2.5 text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path><path d="M20 2v4"></path><path d="M22 4h-4"></path><circle cx="4" cy="20" r="2"></circle></svg></div></div><div class="text-left"><div class="flex items-center gap-1.5 sm:gap-2"><span class="text-xl sm:text-2xl font-black tracking-tight text-white">Uni<span class="text-blue-500">Nest</span></span><span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-blue-950 text-blue-300 border border-blue-800/60 uppercase tracking-wider">CBU Agent</span></div><p class="hidden md:block text-[11px] text-blue-300/70 font-medium -mt-0.5">Copperbelt University Verified Boarding Houses</p></div></a></div><div class="hidden md:flex items-center gap-2"><span class="px-3 py-1.5 rounded-full bg-zinc-950 border border-blue-900/60 text-xs font-semibold text-blue-300 flex items-center gap-1.5 shadow-inner"><span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span><span>CBU Kitwe Zone • Riverside, Kwacha, Eastlea</span></span></div><div class="flex items-center gap-2"><div class="relative hidden md:block"><button class="flex items-center gap-2.5 p-1.5 pr-3.5 rounded-2xl bg-zinc-950 hover:bg-blue-950/60 border border-blue-900/60 hover:border-blue-500/60 transition-all cursor-pointer shadow-sm"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&amp;auto=format&amp;fit=crop&amp;q=80" alt="Chileshe Mwape" class="w-8 h-8 rounded-xl border border-blue-500 object-cover"><div class="text-left leading-tight"><p class="text-xs font-bold text-white flex items-center gap-1">Chileshe Mwape<svg class="w-3.5 h-3.5 text-blue-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"></path><path d="m16 9-5.5 5.5L8 12"></path></svg></p><p class="text-[10px] text-blue-400 uppercase tracking-wider font-semibold">student</p></div><svg class="w-3.5 h-3.5 text-blue-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></button></div><div class="relative md:hidden"><button class="p-2.5 rounded-xl bg-zinc-950 hover:bg-blue-950 border border-blue-800/60 text-blue-200 hover:text-white transition-all cursor-pointer shadow-md" aria-label="Toggle navigation menu"><svg class="w-5 h-5 text-blue-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg></button></div></div></div></div></header><main class="flex-1"><div class="space-y-8 pt-6 pb-16"><section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="bg-zinc-950 border border-blue-900/50 rounded-2xl p-4 sm:p-5 shadow-xl space-y-4"><div class="flex flex-col sm:flex-row items-stretch gap-3"><div class="relative flex-1"><svg class="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-blue-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21 21-4.34-4.34"></path><circle cx="11" cy="11" r="8"></circle></svg><input type="text" placeholder="Search CBU area (e.g. Riverside, Kwacha East, Eastlea, West Gate), room type..." class="w-full pl-10 pr-4 py-2.5 bg-black border border-blue-800/60 rounded-xl text-white text-sm placeholder:text-blue-400/50 focus:outline-none focus:border-blue-400 focus:ring-1 focus:ring-blue-400 transition-all"></div><div class="flex items-center gap-2"><button class="flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all border cursor-pointer bg-black text-blue-300 border-blue-800/60 hover:border-blue-500"><svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 5H3"></path><path d="M12 19H3"></path><path d="M14 3v4"></path><path d="M16 17v4"></path><path d="M21 12h-9"></path><path d="M21 19h-5"></path><path d="M21 5h-7"></path><path d="M8 10v4"></path><path d="M8 12H3"></path></svg><span>Filters</span></button><select value="" class="px-3.5 py-2.5 bg-black border border-blue-800/60 rounded-xl text-white text-xs sm:text-sm font-medium focus:outline-none focus:border-blue-400"><option value="">Featured First</option><option value="">Price: Low to High</option><option value="">Price: High to Low</option><option value="">Highest Rated</option><option value="">Most Unlocked</option></select></div></div></div></section><section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="flex items-center justify-between mb-6"><div><h2 class="text-xl sm:text-2xl font-black text-white flex items-center gap-2">Available CBU Boarding Houses<span class="text-xs px-2.5 py-0.5 rounded-full bg-blue-950 text-blue-300 border border-blue-800">Kitwe</span></h2><p class="text-xs sm:text-sm text-blue-300/80">Showing 6 verified rooms near Copperbelt University (Riverside, Kwacha East, Eastlea, West Gate)</p></div></div><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"><div class="group relative bg-zinc-950 border border-blue-900/40 hover:border-blue-500/70 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-blue-950/60 flex flex-col cursor-pointer"><div class="relative aspect-[16/10] w-full overflow-hidden bg-black"><img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?w=800&amp;auto=format&amp;fit=crop&amp;q=80" alt="Modern Executive Single Room with Backup Solar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"><div class="opacity-0 group-hover:opacity-100 transition-opacity"><button class="absolute left-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/70 border border-blue-400/50 text-white flex items-center justify-center hover:bg-blue-600 transition-colors"><svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg></button><button class="absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/70 border border-blue-400/50 text-white flex items-center justify-center hover:bg-blue-600 transition-colors"><svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg></button></div><div class="absolute top-3 left-3 right-3 flex items-center justify-between pointer-events-none"><div class="flex items-center gap-1.5 flex-wrap"><span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-semibold bg-black/80 backdrop-blur-md text-blue-300 border border-blue-500/60 shadow-md"><svg class="w-3.5 h-3.5 text-blue-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>Verified Landlord</span><span class="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-medium bg-blue-950/90 text-blue-200 border border-blue-800/60 backdrop-blur-md">Mixed Gender</span></div><button type="button" class="pointer-events-auto p-2 rounded-xl backdrop-blur-md transition-all bg-black/60 text-blue-300 hover:text-white hover:bg-black/80 border border-blue-900/60" title="Save to favorites"><svg class="w-4 h-4 " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path></svg></button></div><div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black via-black/70 to-transparent p-3 flex items-end justify-between"><div><span class="text-xl font-black text-white drop-shadow">K1,850</span><span class="text-xs text-blue-300/90 font-medium ml-1">/month</span></div><span class="inline-flex items-center gap-1 text-[11px] font-semibold text-blue-300 bg-black/70 px-2 py-0.5 rounded-md border border-blue-900/50"><svg class="w-3 h-3 text-blue-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>350m / 4 min walk</span></div></div><div class="p-4 flex-1 flex flex-col justify-between space-y-3"><div><div class="flex items-center justify-between text-xs text-blue-400 mb-1"><span class="font-semibold uppercase tracking-wider text-[11px] truncate max-w-[200px]">Copperbelt University (CBU)</span><div class="flex items-center gap-1 text-amber-400 font-semibold"><svg class="w-3.5 h-3.5 fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg><span>4.9</span><span class="text-[10px] text-blue-400/80">(14)</span></div></div><h4 class="text-base font-bold text-white group-hover:text-blue-300 transition-colors line-clamp-1">Modern Executive Single Room with Backup Solar</h4><p class="text-xs text-blue-200/80 mt-1 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></span><span class="truncate">Riverside, 4 mins to CBU West Gate</span></p></div><div class="flex items-center gap-1.5 flex-wrap pt-1"><span class="px-2 py-0.5 text-[11px] font-medium rounded-md bg-blue-950 text-blue-300 border border-blue-900">Single Room</span><span class="inline-flex items-center gap-1 px-2 py-0.5 text-[11px] rounded-md bg-blue-950/70 text-blue-300 border border-blue-900"><svg class="w-3 h-3 text-yellow-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z"></path></svg>Solar Backup</span><span class="inline-flex items-center gap-1 px-2 py-0.5 text-[11px] rounded-md bg-blue-950/70 text-blue-300 border border-blue-900"><svg class="w-3 h-3 text-cyan-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"></path><path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97"></path></svg>Borehole</span><span class="inline-flex items-center gap-1 px-2 py-0.5 text-[11px] rounded-md bg-blue-950/70 text-blue-300 border border-blue-900"><svg class="w-3 h-3 text-blue-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h.01"></path><path d="M2 8.82a15 15 0 0 1 20 0"></path><path d="M5 12.859a10 10 0 0 1 14 0"></path><path d="M8.5 16.429a5 5 0 0 1 7 0"></path></svg>Wi-Fi</span></div><div class="pt-2 border-t border-blue-900/40"><div class="bg-blue-950/50 p-2.5 rounded-xl border border-blue-400/50 flex items-center justify-between gap-2"><div class="flex items-center gap-2"><div class="w-7 h-7 rounded-lg bg-blue-600 text-white flex items-center justify-center shrink-0"><svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 9.9-1"></path></svg></div><div class="text-left"><p class="text-[11px] font-bold text-white">Contact Unlocked</p><p class="text-[10px] text-blue-300">Tap to call or view directions</p></div></div><button type="button" class="px-3 py-1.5 bg-zinc-900 hover:bg-zinc-800 text-blue-300 hover:text-white border border-blue-600/50 text-xs font-bold rounded-lg transition-all flex items-center gap-1"><span>View Details</span><svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></button></div></div></div></div><div class="group relative bg-zinc-950 border border-blue-900/40 hover:border-blue-500/70 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-blue-950/60 flex flex-col cursor-pointer"><div class="relative aspect-[16/10] w-full overflow-hidden bg-black"><img src="https://images.unsplash.com/photo-1540518614846-7ede433c4ef4?w=800&amp;auto=format&amp;fit=crop&amp;q=80" alt="Spacious 2-in-1 Shared Bedroom with Built-in Wardrobes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"><div class="opacity-0 group-hover:opacity-100 transition-opacity"><button class="absolute left-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/70 border border-blue-400/50 text-white flex items-center justify-center hover:bg-blue-600 transition-colors"><svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg></button><button class="absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/70 border border-blue-400/50 text-white flex items-center justify-center hover:bg-blue-600 transition-colors"><svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg></button></div><div class="absolute top-3 left-3 right-3 flex items-center justify-between pointer-events-none"><div class="flex items-center gap-1.5 flex-wrap"><span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-semibold bg-black/80 backdrop-blur-md text-blue-300 border border-blue-500/60 shadow-md"><svg class="w-3.5 h-3.5 text-blue-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>Verified Landlord</span><span class="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-medium bg-blue-950/90 text-blue-200 border border-blue-800/60 backdrop-blur-md">Ladies Only</span></div><button type="button" class="pointer-events-auto p-2 rounded-xl backdrop-blur-md transition-all bg-black/60 text-blue-300 hover:text-white hover:bg-black/80 border border-blue-900/60" title="Save to favorites"><svg class="w-4 h-4 " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path></svg></button></div><div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black via-black/70 to-transparent p-3 flex items-end justify-between"><div><span class="text-xl font-black text-white drop-shadow">K950</span><span class="text-xs text-blue-300/90 font-medium ml-1">/month</span></div><span class="inline-flex items-center gap-1 text-[11px] font-semibold text-blue-300 bg-black/70 px-2 py-0.5 rounded-md border border-blue-900/50"><svg class="w-3 h-3 text-blue-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>800m / 9 min walk</span></div></div><div class="p-4 flex-1 flex flex-col justify-between space-y-3"><div><div class="flex items-center justify-between text-xs text-blue-400 mb-1"><span class="font-semibold uppercase tracking-wider text-[11px] truncate max-w-[200px]">Copperbelt University (CBU)</span><div class="flex items-center gap-1 text-amber-400 font-semibold"><svg class="w-3.5 h-3.5 fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg><span>4.8</span><span class="text-[10px] text-blue-400/80">(9)</span></div></div><h4 class="text-base font-bold text-white group-hover:text-blue-300 transition-colors line-clamp-1">Spacious 2-in-1 Shared Bedroom with Built-in Wardrobes</h4><p class="text-xs text-blue-200/80 mt-1 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></span><span class="truncate">Kwacha East, Near St. Kizito Catholic Church</span></p></div><div class="flex items-center gap-1.5 flex-wrap pt-1"><span class="px-2 py-0.5 text-[11px] font-medium rounded-md bg-blue-950 text-blue-300 border border-blue-900">2-in-1 Shared</span><span class="inline-flex items-center gap-1 px-2 py-0.5 text-[11px] rounded-md bg-blue-950/70 text-blue-300 border border-blue-900"><svg class="w-3 h-3 text-cyan-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"></path><path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97"></path></svg>Borehole</span><span class="inline-flex items-center gap-1 px-2 py-0.5 text-[11px] rounded-md bg-blue-950/70 text-blue-300 border border-blue-900"><svg class="w-3 h-3 text-blue-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h.01"></path><path d="M2 8.82a15 15 0 0 1 20 0"></path><path d="M5 12.859a10 10 0 0 1 14 0"></path><path d="M8.5 16.429a5 5 0 0 1 7 0"></path></svg>Wi-Fi</span></div><div class="pt-2 border-t border-blue-900/40"><div class="bg-black/90 p-2.5 rounded-xl border border-blue-500/30 flex items-center justify-between gap-2"><div class="flex items-center gap-2"><div class="w-7 h-7 rounded-lg bg-blue-950 border border-blue-600/40 flex items-center justify-center text-blue-400 shrink-0"><svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></div><div class="text-left"><p class="text-[11px] font-bold text-white">Contact &amp; Plot Hidden</p><p class="text-[10px] text-blue-300/80">42 students unlocked</p></div></div><button type="button" class="px-3 py-1.5 bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold rounded-lg shadow-md shadow-blue-600/30 transition-all flex items-center gap-1 shrink-0"><span>Unlock (K25)</span></button></div></div></div></div><div class="group relative bg-zinc-950 border border-blue-900/40 hover:border-blue-500/70 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-blue-950/60 flex flex-col cursor-pointer"><div class="relative aspect-[16/10] w-full overflow-hidden bg-black"><img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&amp;auto=format&amp;fit=crop&amp;q=80" alt="Self-Contained Studio Flat with Private Toilet &amp; Kitchenette" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"><div class="opacity-0 group-hover:opacity-100 transition-opacity"><button class="absolute left-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/70 border border-blue-400/50 text-white flex items-center justify-center hover:bg-blue-600 transition-colors"><svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg></button><button class="absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/70 border border-blue-400/50 text-white flex items-center justify-center hover:bg-blue-600 transition-colors"><svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg></button></div><div class="absolute top-3 left-3 right-3 flex items-center justify-between pointer-events-none"><div class="flex items-center gap-1.5 flex-wrap"><span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-semibold bg-black/80 backdrop-blur-md text-blue-300 border border-blue-500/60 shadow-md"><svg class="w-3.5 h-3.5 text-blue-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>Verified Landlord</span><span class="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-medium bg-blue-950/90 text-blue-200 border border-blue-800/60 backdrop-blur-md">Mixed Gender</span></div><button type="button" class="pointer-events-auto p-2 rounded-xl backdrop-blur-md transition-all bg-black/60 text-blue-300 hover:text-white hover:bg-black/80 border border-blue-900/60" title="Save to favorites"><svg class="w-4 h-4 " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path></svg></button></div><div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black via-black/70 to-transparent p-3 flex items-end justify-between"><div><span class="text-xl font-black text-white drop-shadow">K2,400</span><span class="text-xs text-blue-300/90 font-medium ml-1">/month</span></div><span class="inline-flex items-center gap-1 text-[11px] font-semibold text-blue-300 bg-black/70 px-2 py-0.5 rounded-md border border-blue-900/50"><svg class="w-3 h-3 text-blue-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>600m / 7 min walk</span></div></div><div class="p-4 flex-1 flex flex-col justify-between space-y-3"><div><div class="flex items-center justify-between text-xs text-blue-400 mb-1"><span class="font-semibold uppercase tracking-wider text-[11px] truncate max-w-[200px]">Copperbelt University (CBU)</span><div class="flex items-center gap-1 text-amber-400 font-semibold"><svg class="w-3.5 h-3.5 fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg><span>4.9</span><span class="text-[10px] text-blue-400/80">(21)</span></div></div><h4 class="text-base font-bold text-white group-hover:text-blue-300 transition-colors line-clamp-1">Self-Contained Studio Flat with Private Toilet &amp; Kitchenette</h4><p class="text-xs text-blue-200/80 mt-1 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></span><span class="truncate">Riverside Extension, 7 mins to CBU East Gate</span></p></div><div class="flex items-center gap-1.5 flex-wrap pt-1"><span class="px-2 py-0.5 text-[11px] font-medium rounded-md bg-blue-950 text-blue-300 border border-blue-900">Self-Contained Studio</span><span class="inline-flex items-center gap-1 px-2 py-0.5 text-[11px] rounded-md bg-blue-950/70 text-blue-300 border border-blue-900"><svg class="w-3 h-3 text-yellow-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z"></path></svg>Solar Backup</span><span class="inline-flex items-center gap-1 px-2 py-0.5 text-[11px] rounded-md bg-blue-950/70 text-blue-300 border border-blue-900"><svg class="w-3 h-3 text-cyan-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"></path><path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97"></path></svg>Borehole</span><span class="inline-flex items-center gap-1 px-2 py-0.5 text-[11px] rounded-md bg-blue-950/70 text-blue-300 border border-blue-900"><svg class="w-3 h-3 text-blue-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h.01"></path><path d="M2 8.82a15 15 0 0 1 20 0"></path><path d="M5 12.859a10 10 0 0 1 14 0"></path><path d="M8.5 16.429a5 5 0 0 1 7 0"></path></svg>Wi-Fi</span></div><div class="pt-2 border-t border-blue-900/40"><div class="bg-black/90 p-2.5 rounded-xl border border-blue-500/30 flex items-center justify-between gap-2"><div class="flex items-center gap-2"><div class="w-7 h-7 rounded-lg bg-blue-950 border border-blue-600/40 flex items-center justify-center text-blue-400 shrink-0"><svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></div><div class="text-left"><p class="text-[11px] font-bold text-white">Contact &amp; Plot Hidden</p><p class="text-[10px] text-blue-300/80">56 students unlocked</p></div></div><button type="button" class="px-3 py-1.5 bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold rounded-lg shadow-md shadow-blue-600/30 transition-all flex items-center gap-1 shrink-0"><span>Unlock (K25)</span></button></div></div></div></div><div class="group relative bg-zinc-950 border border-blue-900/40 hover:border-blue-500/70 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-blue-950/60 flex flex-col cursor-pointer"><div class="relative aspect-[16/10] w-full overflow-hidden bg-black"><img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&amp;auto=format&amp;fit=crop&amp;q=80" alt="Budget-Friendly Bedspace in 4-Sharing Hall" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"><div class="opacity-0 group-hover:opacity-100 transition-opacity"><button class="absolute left-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/70 border border-blue-400/50 text-white flex items-center justify-center hover:bg-blue-600 transition-colors"><svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg></button><button class="absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/70 border border-blue-400/50 text-white flex items-center justify-center hover:bg-blue-600 transition-colors"><svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg></button></div><div class="absolute top-3 left-3 right-3 flex items-center justify-between pointer-events-none"><div class="flex items-center gap-1.5 flex-wrap"><span class="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-medium bg-blue-950/90 text-blue-200 border border-blue-800/60 backdrop-blur-md">Men Only</span></div><button type="button" class="pointer-events-auto p-2 rounded-xl backdrop-blur-md transition-all bg-black/60 text-blue-300 hover:text-white hover:bg-black/80 border border-blue-900/60" title="Save to favorites"><svg class="w-4 h-4 " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path></svg></button></div><div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black via-black/70 to-transparent p-3 flex items-end justify-between"><div><span class="text-xl font-black text-white drop-shadow">K650</span><span class="text-xs text-blue-300/90 font-medium ml-1">/month</span></div><span class="inline-flex items-center gap-1 text-[11px] font-semibold text-blue-300 bg-black/70 px-2 py-0.5 rounded-md border border-blue-900/50"><svg class="w-3 h-3 text-blue-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>500m / 6 min walk</span></div></div><div class="p-4 flex-1 flex flex-col justify-between space-y-3"><div><div class="flex items-center justify-between text-xs text-blue-400 mb-1"><span class="font-semibold uppercase tracking-wider text-[11px] truncate max-w-[200px]">Copperbelt University (CBU)</span><div class="flex items-center gap-1 text-amber-400 font-semibold"><svg class="w-3.5 h-3.5 fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg><span>4.5</span><span class="text-[10px] text-blue-400/80">(6)</span></div></div><h4 class="text-base font-bold text-white group-hover:text-blue-300 transition-colors line-clamp-1">Budget-Friendly Bedspace in 4-Sharing Hall</h4><p class="text-xs text-blue-200/80 mt-1 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></span><span class="truncate">Eastlea, Near Riverside Police Post</span></p></div><div class="flex items-center gap-1.5 flex-wrap pt-1"><span class="px-2 py-0.5 text-[11px] font-medium rounded-md bg-blue-950 text-blue-300 border border-blue-900">4-Bed Sharing</span><span class="inline-flex items-center gap-1 px-2 py-0.5 text-[11px] rounded-md bg-blue-950/70 text-blue-300 border border-blue-900"><svg class="w-3 h-3 text-cyan-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"></path><path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97"></path></svg>Borehole</span><span class="inline-flex items-center gap-1 px-2 py-0.5 text-[11px] rounded-md bg-blue-950/70 text-blue-300 border border-blue-900"><svg class="w-3 h-3 text-blue-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h.01"></path><path d="M2 8.82a15 15 0 0 1 20 0"></path><path d="M5 12.859a10 10 0 0 1 14 0"></path><path d="M8.5 16.429a5 5 0 0 1 7 0"></path></svg>Wi-Fi</span></div><div class="pt-2 border-t border-blue-900/40"><div class="bg-black/90 p-2.5 rounded-xl border border-blue-500/30 flex items-center justify-between gap-2"><div class="flex items-center gap-2"><div class="w-7 h-7 rounded-lg bg-blue-950 border border-blue-600/40 flex items-center justify-center text-blue-400 shrink-0"><svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></div><div class="text-left"><p class="text-[11px] font-bold text-white">Contact &amp; Plot Hidden</p><p class="text-[10px] text-blue-300/80">19 students unlocked</p></div></div><button type="button" class="px-3 py-1.5 bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold rounded-lg shadow-md shadow-blue-600/30 transition-all flex items-center gap-1 shrink-0"><span>Unlock (K25)</span></button></div></div></div></div><div class="group relative bg-zinc-950 border border-blue-900/40 hover:border-blue-500/70 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-blue-950/60 flex flex-col cursor-pointer"><div class="relative aspect-[16/10] w-full overflow-hidden bg-black"><img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=800&amp;auto=format&amp;fit=crop&amp;q=80" alt="Prime Single Room in Quiet Residential Cul-de-Sac" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"><div class="opacity-0 group-hover:opacity-100 transition-opacity"><button class="absolute left-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/70 border border-blue-400/50 text-white flex items-center justify-center hover:bg-blue-600 transition-colors"><svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg></button><button class="absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/70 border border-blue-400/50 text-white flex items-center justify-center hover:bg-blue-600 transition-colors"><svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg></button></div><div class="absolute top-3 left-3 right-3 flex items-center justify-between pointer-events-none"><div class="flex items-center gap-1.5 flex-wrap"><span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-semibold bg-black/80 backdrop-blur-md text-blue-300 border border-blue-500/60 shadow-md"><svg class="w-3.5 h-3.5 text-blue-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>Verified Landlord</span><span class="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-medium bg-blue-950/90 text-blue-200 border border-blue-800/60 backdrop-blur-md">Mixed Gender</span></div><button type="button" class="pointer-events-auto p-2 rounded-xl backdrop-blur-md transition-all bg-black/60 text-blue-300 hover:text-white hover:bg-black/80 border border-blue-900/60" title="Save to favorites"><svg class="w-4 h-4 " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path></svg></button></div><div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black via-black/70 to-transparent p-3 flex items-end justify-between"><div><span class="text-xl font-black text-white drop-shadow">K1,400</span><span class="text-xs text-blue-300/90 font-medium ml-1">/month</span></div><span class="inline-flex items-center gap-1 text-[11px] font-semibold text-blue-300 bg-black/70 px-2 py-0.5 rounded-md border border-blue-900/50"><svg class="w-3 h-3 text-blue-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>450m / 5 min walk</span></div></div><div class="p-4 flex-1 flex flex-col justify-between space-y-3"><div><div class="flex items-center justify-between text-xs text-blue-400 mb-1"><span class="font-semibold uppercase tracking-wider text-[11px] truncate max-w-[200px]">Copperbelt University (CBU)</span><div class="flex items-center gap-1 text-amber-400 font-semibold"><svg class="w-3.5 h-3.5 fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg><span>5.0</span><span class="text-[10px] text-blue-400/80">(8)</span></div></div><h4 class="text-base font-bold text-white group-hover:text-blue-300 transition-colors line-clamp-1">Prime Single Room in Quiet Residential Cul-de-Sac</h4><p class="text-xs text-blue-200/80 mt-1 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></span><span class="truncate">Parklands, 5 mins from CBU Main Campus</span></p></div><div class="flex items-center gap-1.5 flex-wrap pt-1"><span class="px-2 py-0.5 text-[11px] font-medium rounded-md bg-blue-950 text-blue-300 border border-blue-900">Single Room</span><span class="inline-flex items-center gap-1 px-2 py-0.5 text-[11px] rounded-md bg-blue-950/70 text-blue-300 border border-blue-900"><svg class="w-3 h-3 text-yellow-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z"></path></svg>Solar Backup</span><span class="inline-flex items-center gap-1 px-2 py-0.5 text-[11px] rounded-md bg-blue-950/70 text-blue-300 border border-blue-900"><svg class="w-3 h-3 text-cyan-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"></path><path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97"></path></svg>Borehole</span><span class="inline-flex items-center gap-1 px-2 py-0.5 text-[11px] rounded-md bg-blue-950/70 text-blue-300 border border-blue-900"><svg class="w-3 h-3 text-blue-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h.01"></path><path d="M2 8.82a15 15 0 0 1 20 0"></path><path d="M5 12.859a10 10 0 0 1 14 0"></path><path d="M8.5 16.429a5 5 0 0 1 7 0"></path></svg>Wi-Fi</span></div><div class="pt-2 border-t border-blue-900/40"><div class="bg-black/90 p-2.5 rounded-xl border border-blue-500/30 flex items-center justify-between gap-2"><div class="flex items-center gap-2"><div class="w-7 h-7 rounded-lg bg-blue-950 border border-blue-600/40 flex items-center justify-center text-blue-400 shrink-0"><svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></div><div class="text-left"><p class="text-[11px] font-bold text-white">Contact &amp; Plot Hidden</p><p class="text-[10px] text-blue-300/80">31 students unlocked</p></div></div><button type="button" class="px-3 py-1.5 bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold rounded-lg shadow-md shadow-blue-600/30 transition-all flex items-center gap-1 shrink-0"><span>Unlock (K25)</span></button></div></div></div></div><div class="group relative bg-zinc-950 border border-blue-900/40 hover:border-blue-500/70 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-blue-950/60 flex flex-col cursor-pointer"><div class="relative aspect-[16/10] w-full overflow-hidden bg-black"><img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&amp;auto=format&amp;fit=crop&amp;q=80" alt="Brand New Self-Contained 1-Bed Apartment" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"><div class="opacity-0 group-hover:opacity-100 transition-opacity"><button class="absolute left-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/70 border border-blue-400/50 text-white flex items-center justify-center hover:bg-blue-600 transition-colors"><svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg></button><button class="absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/70 border border-blue-400/50 text-white flex items-center justify-center hover:bg-blue-600 transition-colors"><svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg></button></div><div class="absolute top-3 left-3 right-3 flex items-center justify-between pointer-events-none"><div class="flex items-center gap-1.5 flex-wrap"><span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-semibold bg-black/80 backdrop-blur-md text-blue-300 border border-blue-500/60 shadow-md"><svg class="w-3.5 h-3.5 text-blue-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>Verified Landlord</span><span class="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-medium bg-blue-950/90 text-blue-200 border border-blue-800/60 backdrop-blur-md">Mixed Gender</span></div><button type="button" class="pointer-events-auto p-2 rounded-xl backdrop-blur-md transition-all bg-black/60 text-blue-300 hover:text-white hover:bg-black/80 border border-blue-900/60" title="Save to favorites"><svg class="w-4 h-4 " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path></svg></button></div><div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black via-black/70 to-transparent p-3 flex items-end justify-between"><div><span class="text-xl font-black text-white drop-shadow">K2,600</span><span class="text-xs text-blue-300/90 font-medium ml-1">/month</span></div><span class="inline-flex items-center gap-1 text-[11px] font-semibold text-blue-300 bg-black/70 px-2 py-0.5 rounded-md border border-blue-900/50"><svg class="w-3 h-3 text-blue-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>300m / 3 min walk</span></div></div><div class="p-4 flex-1 flex flex-col justify-between space-y-3"><div><div class="flex items-center justify-between text-xs text-blue-400 mb-1"><span class="font-semibold uppercase tracking-wider text-[11px] truncate max-w-[200px]">Copperbelt University (CBU)</span><div class="flex items-center gap-1 text-amber-400 font-semibold"><svg class="w-3.5 h-3.5 fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg><span>4.7</span><span class="text-[10px] text-blue-400/80">(5)</span></div></div><h4 class="text-base font-bold text-white group-hover:text-blue-300 transition-colors line-clamp-1">Brand New Self-Contained 1-Bed Apartment</h4><p class="text-xs text-blue-200/80 mt-1 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></span><span class="truncate">Nkana East, Near CBU Medical Campus</span></p></div><div class="flex items-center gap-1.5 flex-wrap pt-1"><span class="px-2 py-0.5 text-[11px] font-medium rounded-md bg-blue-950 text-blue-300 border border-blue-900">Self-Contained Studio</span><span class="inline-flex items-center gap-1 px-2 py-0.5 text-[11px] rounded-md bg-blue-950/70 text-blue-300 border border-blue-900"><svg class="w-3 h-3 text-yellow-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z"></path></svg>Solar Backup</span><span class="inline-flex items-center gap-1 px-2 py-0.5 text-[11px] rounded-md bg-blue-950/70 text-blue-300 border border-blue-900"><svg class="w-3 h-3 text-cyan-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"></path><path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97"></path></svg>Borehole</span><span class="inline-flex items-center gap-1 px-2 py-0.5 text-[11px] rounded-md bg-blue-950/70 text-blue-300 border border-blue-900"><svg class="w-3 h-3 text-blue-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h.01"></path><path d="M2 8.82a15 15 0 0 1 20 0"></path><path d="M5 12.859a10 10 0 0 1 14 0"></path><path d="M8.5 16.429a5 5 0 0 1 7 0"></path></svg>Wi-Fi</span></div><div class="pt-2 border-t border-blue-900/40"><div class="bg-black/90 p-2.5 rounded-xl border border-blue-500/30 flex items-center justify-between gap-2"><div class="flex items-center gap-2"><div class="w-7 h-7 rounded-lg bg-blue-950 border border-blue-600/40 flex items-center justify-center text-blue-400 shrink-0"><svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></div><div class="text-left"><p class="text-[11px] font-bold text-white">Contact &amp; Plot Hidden</p><p class="text-[10px] text-blue-300/80">22 students unlocked</p></div></div><button type="button" class="px-3 py-1.5 bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold rounded-lg shadow-md shadow-blue-600/30 transition-all flex items-center gap-1 shrink-0"><span>Unlock (K25)</span></button></div></div></div></div></div></section><section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4"><div class="bg-gradient-to-b from-blue-950/40 via-zinc-950 to-black border border-blue-800/40 rounded-3xl p-6 sm:p-8"><div class="text-center max-w-xl mx-auto mb-8"><span class="text-xs font-bold uppercase tracking-wider text-blue-400">Safe &amp; Scam-Free Process</span><h3 class="text-2xl font-black text-white mt-1">How UniNest CBU Agent Works</h3><p class="text-xs text-blue-300 mt-1">Built to protect CBU students from fake middlemen and avoid wasted trips.</p></div><div class="grid grid-cols-1 md:grid-cols-4 gap-6"><div class="bg-black/60 p-5 rounded-2xl border border-blue-900/40 text-center space-y-2"><div class="w-10 h-10 rounded-xl bg-blue-950 border border-blue-500/40 text-blue-400 font-black text-sm flex items-center justify-center mx-auto">1</div><h4 class="text-sm font-bold text-white">Browse Safe Info</h4><p class="text-xs text-blue-300/80">View photos, amenities, backup solar, distance to campus, and safe general area without fake broker spam.</p></div><div class="bg-black/60 p-5 rounded-2xl border border-blue-900/40 text-center space-y-2"><div class="w-10 h-10 rounded-xl bg-blue-950 border border-blue-500/40 text-blue-400 font-black text-sm flex items-center justify-center mx-auto">2</div><h4 class="text-sm font-bold text-white">Unlock Contact</h4><p class="text-xs text-blue-300/80">Pay the small K25 agent verification fee via MTN MoMo or Airtel Money for the exact listing.</p></div><div class="bg-black/60 p-5 rounded-2xl border border-blue-900/40 text-center space-y-2"><div class="w-10 h-10 rounded-xl bg-blue-950 border border-blue-500/40 text-blue-400 font-black text-sm flex items-center justify-center mx-auto">3</div><h4 class="text-sm font-bold text-white">Direct WhatsApp</h4><p class="text-xs text-blue-300/80">Receive the landlord's verified phone, exact plot number, caretaker instructions, and map directions.</p></div><div class="bg-black/60 p-5 rounded-2xl border border-blue-900/40 text-center space-y-2"><div class="w-10 h-10 rounded-xl bg-blue-950 border border-blue-500/40 text-blue-400 font-black text-sm flex items-center justify-center mx-auto">4</div><h4 class="text-sm font-bold text-white">Inspect Before Paying</h4><p class="text-xs text-blue-300/80">Visit the boarding house physically and inspect the room before paying any rent to the landlord.</p></div></div></div></section></div></main></div></div>
-      <!-- Static footer: this footer has no application state and belongs in HTML. -->
-      <footer class="bg-black border-t border-blue-900/40 py-12 text-blue-300"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8"><div class="space-y-3"><div class="flex items-center gap-2"><div class="w-8 h-8 rounded-lg bg-blue-600 text-white flex items-center justify-center font-bold"><svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 21 9.6-9.6"></path><path d="m7.5 15.5 2.3 2.3a1 1 0 0 1 0 1.4l-2.1 2.1a1 1 0 0 1-1.4 0L4 19"></path><circle cx="15.5" cy="7.5" r="5.5"></circle></svg></div><span class="text-xl font-black text-white">Uni<span class="text-blue-500">Nest</span></span></div><p class="text-xs text-blue-300/80 leading-relaxed">Zambia's verified university boarding house discovery platform. Protecting students through transparent room specs and scam-free landlord contact unlocking.</p><div class="flex items-center gap-2 text-xs text-blue-400"><svg class="w-4 h-4 text-blue-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg><span>Verified Agent License #ZM-BH-2026</span></div></div><div class="space-y-2 text-xs"><h4 class="font-bold text-white uppercase tracking-wider text-[11px] text-blue-400">CBU Boarding Zones</h4><ul class="space-y-1.5 text-blue-200/80"><li>• Riverside (CBU West &amp; East Gates)</li><li>• Kwacha East &amp; St. Kizito area</li><li>• Eastlea &amp; Riverside Extension</li><li>• Parklands &amp; Nkana East (CBU Medical)</li></ul></div><div class="space-y-2 text-xs"><h4 class="font-bold text-white uppercase tracking-wider text-[11px] text-blue-400">Student Safety Rules</h4><ul class="space-y-1.5 text-blue-200/80"><li>✓ Inspect the room physically before paying any rent</li><li>✓ Demand a written tenancy agreement and receipt</li><li>✓ Verify solar backup &amp; borehole water on site</li><li>✓ Report fraudulent or occupied rooms for a fee refund</li></ul></div><div class="space-y-3 text-xs"><h4 class="font-bold text-white uppercase tracking-wider text-[11px] text-blue-400">Agent Support Line</h4><p class="text-blue-200/80">Have questions or need manual verification of a boarding house?</p><div class="flex flex-col gap-2"><a href="https://wa.me/260979990000?text=Hello%20UniNest%20Agent,%20I%20need%20assistance" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3 py-2 bg-blue-950 hover:bg-blue-900 border border-blue-700/60 text-blue-200 rounded-xl transition-colors font-medium"><svg class="w-3.5 h-3.5 text-emerald-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"></path></svg><span>Agent WhatsApp: +260 97 999 0000</span></a><a href="tel:+260979990000" class="inline-flex items-center gap-2 px-3 py-2 bg-blue-950 hover:bg-blue-900 border border-blue-700/60 text-blue-200 rounded-xl transition-colors font-medium"><svg class="w-3.5 h-3.5 text-blue-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg><span>Direct Hotline: +260 97 999 0000</span></a></div></div></div><div class="pt-8 border-t border-blue-950 flex flex-col sm:flex-row items-center justify-between text-xs text-blue-400/70 gap-3"><p>© 2026 UniNest Boarding House Services. All rights reserved.</p><p class="flex items-center gap-1"><span>Theme: Deep Black &amp; Electric Blue</span><span>• Powered by UniNest Agent Engine</span></p></div></div></footer>
-
-      <noscript>
-        <main class="min-h-screen bg-black text-white flex items-center justify-center p-6 text-center">
-          <p>UniNest needs JavaScript enabled to provide listings, role switching, filters, payments, and contact unlocking.</p>
-        </main>
-      </noscript>
+  <div id="app-shell">
+   <div aria-label="UniNest static frontend" aria-live="polite" id="root">
+    <div class="min-h-screen bg-black text-blue-50 flex flex-col font-sans selection:bg-blue-600 selection:text-white">
+     <header class="sticky top-0 z-40 bg-black/95 backdrop-blur-md border-b border-blue-900/40">
+      <div class="bg-gradient-to-r from-blue-950 via-blue-900 to-black text-blue-200 text-[11px] sm:text-xs py-1.5 px-3 sm:px-4 text-center border-b border-blue-800/30 flex items-center justify-center gap-1.5">
+       <svg aria-hidden="true" class="w-3.5 h-3.5 text-blue-400 shrink-0" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10">
+        </circle>
+        <path d="M12 16v-4">
+        </path>
+        <path d="M12 8h.01">
+        </path>
+       </svg>
+       <span class="truncate">
+        <strong class="text-white">
+         CBU Student Safety:
+        </strong>
+        Inspect room physically before paying rent. Unlock fee is only
+        <strong>
+         K25
+        </strong>
+        .
+       </span>
+      </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+       <div class="flex items-center justify-between h-16 sm:h-20">
+        <div class="flex items-center gap-3">
+         <button class="flex items-center gap-2.5 sm:gap-3 group" type="button">
+          <div class="relative flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-tr from-blue-700 via-blue-600 to-blue-400 text-white shadow-lg shadow-blue-600/30 ring-1 ring-blue-400/40 group-hover:scale-105 transition-transform">
+           <svg aria-hidden="true" class="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="m2 21 9.6-9.6">
+            </path>
+            <path d="m7.5 15.5 2.3 2.3a1 1 0 0 1 0 1.4l-2.1 2.1a1 1 0 0 1-1.4 0L4 19">
+            </path>
+            <circle cx="15.5" cy="7.5" r="5.5">
+            </circle>
+           </svg>
+           <div class="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-blue-500 border-2 border-black flex items-center justify-center">
+            <svg aria-hidden="true" class="w-2.5 h-2.5 text-white" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+             <path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z">
+             </path>
+             <path d="M20 2v4">
+             </path>
+             <path d="M22 4h-4">
+             </path>
+             <circle cx="4" cy="20" r="2">
+             </circle>
+            </svg>
+           </div>
+          </div>
+          <div class="text-left">
+           <div class="flex items-center gap-1.5 sm:gap-2">
+            <span class="text-xl sm:text-2xl font-black tracking-tight text-white">
+             Uni
+             <span class="text-blue-500">
+              Nest
+             </span>
+            </span>
+            <span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-blue-950 text-blue-300 border border-blue-800/60 uppercase tracking-wider">
+             CBU Agent
+            </span>
+           </div>
+           <p class="hidden md:block text-[11px] text-blue-300/70 font-medium -mt-0.5">
+            Copperbelt University Verified Boarding Houses
+           </p>
+          </div>
+         </button>
+        </div>
+        <div class="hidden md:flex items-center gap-2">
+         <span class="px-3 py-1.5 rounded-full bg-zinc-950 border border-blue-900/60 text-xs font-semibold text-blue-300 flex items-center gap-1.5 shadow-inner">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse">
+          </span>
+          <span>
+           CBU Kitwe Zone &bull; Riverside, Kwacha, Eastlea
+          </span>
+         </span>
+        </div>
+        <div class="flex items-center gap-2">
+         <div class="relative hidden md:block">
+          <button class="flex items-center gap-2.5 p-1.5 pr-3.5 rounded-2xl bg-zinc-950 hover:bg-blue-950/60 border border-blue-900/60 hover:border-blue-500/60 transition-all cursor-pointer shadow-sm">
+           <img alt="Chileshe Mwape" class="w-8 h-8 rounded-xl border border-blue-500 object-cover" src="assets/photo-1.jpg"/>
+           <div class="text-left leading-tight">
+            <p class="text-xs font-bold text-white flex items-center gap-1">
+             Chileshe Mwape
+             <svg aria-hidden="true" class="w-3.5 h-3.5 text-blue-400" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z">
+              </path>
+              <path d="m16 9-5.5 5.5L8 12">
+              </path>
+             </svg>
+            </p>
+            <p class="text-[10px] text-blue-400 uppercase tracking-wider font-semibold">
+             student
+            </p>
+           </div>
+           <svg aria-hidden="true" class="w-3.5 h-3.5 text-blue-400" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="m6 9 6 6 6-6">
+            </path>
+           </svg>
+          </button>
+         </div>
+         <div class="relative md:hidden">
+          <button aria-label="Toggle navigation menu" class="p-2.5 rounded-xl bg-zinc-950 hover:bg-blue-950 border border-blue-800/60 text-blue-200 hover:text-white transition-all cursor-pointer shadow-md">
+           <svg aria-hidden="true" class="w-5 h-5 text-blue-400" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 5h16">
+            </path>
+            <path d="M4 12h16">
+            </path>
+            <path d="M4 19h16">
+            </path>
+           </svg>
+          </button>
+         </div>
+        </div>
+       </div>
+      </div>
+     </header>
+     <main class="flex-1">
+      <div class="space-y-8 pt-6 pb-16">
+       <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-zinc-950 border border-blue-900/50 rounded-2xl p-4 sm:p-5 shadow-xl space-y-4">
+         <div class="flex flex-col sm:flex-row items-stretch gap-3">
+          <div class="relative flex-1">
+           <svg aria-hidden="true" class="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-blue-400" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="m21 21-4.34-4.34">
+            </path>
+            <circle cx="11" cy="11" r="8">
+            </circle>
+           </svg>
+           <input class="w-full pl-10 pr-4 py-2.5 bg-black border border-blue-800/60 rounded-xl text-white text-sm placeholder:text-blue-400/50 focus:outline-none focus:border-blue-400 focus:ring-1 focus:ring-blue-400 transition-all" placeholder="Search CBU area (e.g. Riverside, Kwacha East, Eastlea, West Gate), room type..." type="text"/>
+          </div>
+          <div class="flex items-center gap-2">
+           <button class="flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all border cursor-pointer bg-black text-blue-300 border-blue-800/60 hover:border-blue-500">
+            <svg aria-hidden="true" class="w-4 h-4" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+             <path d="M10 5H3">
+             </path>
+             <path d="M12 19H3">
+             </path>
+             <path d="M14 3v4">
+             </path>
+             <path d="M16 17v4">
+             </path>
+             <path d="M21 12h-9">
+             </path>
+             <path d="M21 19h-5">
+             </path>
+             <path d="M21 5h-7">
+             </path>
+             <path d="M8 10v4">
+             </path>
+             <path d="M8 12H3">
+             </path>
+            </svg>
+            <span>
+             Filters
+            </span>
+           </button>
+           <select class="px-3.5 py-2.5 bg-black border border-blue-800/60 rounded-xl text-white text-xs sm:text-sm font-medium focus:outline-none focus:border-blue-400" value="">
+            <option value="">
+             Featured First
+            </option>
+            <option value="">
+             Price: Low to High
+            </option>
+            <option value="">
+             Price: High to Low
+            </option>
+            <option value="">
+             Highest Rated
+            </option>
+            <option value="">
+             Most Unlocked
+            </option>
+           </select>
+          </div>
+         </div>
+        </div>
+       </section>
+       <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between mb-6">
+         <div>
+          <h2 class="text-xl sm:text-2xl font-black text-white flex items-center gap-2">
+           Available CBU Boarding Houses
+           <span class="text-xs px-2.5 py-0.5 rounded-full bg-blue-950 text-blue-300 border border-blue-800">
+            Kitwe
+           </span>
+          </h2>
+          <p class="text-xs sm:text-sm text-blue-300/80">
+           Showing 6 verified rooms near Copperbelt University (Riverside, Kwacha East, Eastlea, West Gate)
+          </p>
+         </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+         <div class="group relative bg-zinc-950 border border-blue-900/40 hover:border-blue-500/70 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-blue-950/60 flex flex-col cursor-pointer">
+          <div class="relative aspect-[16/10] w-full overflow-hidden bg-black">
+           <img alt="Modern Executive Single Room with Backup Solar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/photo-2.jpg"/>
+           <div class="opacity-0 group-hover:opacity-100 transition-opacity">
+            <button class="absolute left-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/70 border border-blue-400/50 text-white flex items-center justify-center hover:bg-blue-600 transition-colors">
+             <svg aria-hidden="true" class="w-4 h-4" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="m15 18-6-6 6-6">
+              </path>
+             </svg>
+            </button>
+            <button class="absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/70 border border-blue-400/50 text-white flex items-center justify-center hover:bg-blue-600 transition-colors">
+             <svg aria-hidden="true" class="w-4 h-4" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="m9 18 6-6-6-6">
+              </path>
+             </svg>
+            </button>
+           </div>
+           <div class="absolute top-3 left-3 right-3 flex items-center justify-between pointer-events-none">
+            <div class="flex items-center gap-1.5 flex-wrap">
+             <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-semibold bg-black/80 backdrop-blur-md text-blue-300 border border-blue-500/60 shadow-md">
+              <svg aria-hidden="true" class="w-3.5 h-3.5 text-blue-400" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+               <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z">
+               </path>
+               <path d="m9 12 2 2 4-4">
+               </path>
+              </svg>
+              Verified Landlord
+             </span>
+             <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-medium bg-blue-950/90 text-blue-200 border border-blue-800/60 backdrop-blur-md">
+              Mixed Gender
+             </span>
+            </div>
+            <button class="pointer-events-auto p-2 rounded-xl backdrop-blur-md transition-all bg-black/60 text-blue-300 hover:text-white hover:bg-black/80 border border-blue-900/60" title="Save to favorites" type="button">
+             <svg aria-hidden="true" class="w-4 h-4" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5">
+              </path>
+             </svg>
+            </button>
+           </div>
+           <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black via-black/70 to-transparent p-3 flex items-end justify-between">
+            <div>
+             <span class="text-xl font-black text-white drop-shadow">
+              K1,850
+             </span>
+             <span class="text-xs text-blue-300/90 font-medium ml-1">
+              /month
+             </span>
+            </div>
+            <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-blue-300 bg-black/70 px-2 py-0.5 rounded-md border border-blue-900/50">
+             <svg aria-hidden="true" class="w-3 h-3 text-blue-400" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0">
+              </path>
+              <circle cx="12" cy="10" r="3">
+              </circle>
+             </svg>
+             350m / 4 min walk
+            </span>
+           </div>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+           <div>
+            <div class="flex items-center justify-between text-xs text-blue-400 mb-1">
+             <span class="font-semibold uppercase tracking-wider text-[11px] truncate max-w-[200px]">
+              Copperbelt University (CBU)
+             </span>
+             <div class="flex items-center gap-1 text-amber-400 font-semibold">
+              <svg aria-hidden="true" class="w-3.5 h-3.5 fill-current" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+               <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+               </path>
+              </svg>
+              <span>
+               4.9
+              </span>
+              <span class="text-[10px] text-blue-400/80">
+               (14)
+              </span>
+             </div>
+            </div>
+            <h4 class="text-base font-bold text-white group-hover:text-blue-300 transition-colors line-clamp-1">
+             Modern Executive Single Room with Backup Solar
+            </h4>
+            <p class="text-xs text-blue-200/80 mt-1 flex items-center gap-1">
+             <span class="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0">
+             </span>
+             <span class="truncate">
+              Riverside, 4 mins to CBU West Gate
+             </span>
+            </p>
+           </div>
+           <div class="flex items-center gap-1.5 flex-wrap pt-1">
+            <span class="px-2 py-0.5 text-[11px] font-medium rounded-md bg-blue-950 text-blue-300 border border-blue-900">
+             Single Room
+            </span>
+            <span class="inline-flex items-center gap-1 px-2 py-0.5 text-[11px] rounded-md bg-blue-950/70 text-blue-300 border border-blue-900">
+             <svg aria-hidden="true" class="w-3 h-3 text-yellow-400" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z">
+              </path>
+             </svg>
+             Solar Backup
+            </span>
+            <span class="inline-flex items-center gap-1 px-2 py-0.5 text-[11px] rounded-md bg-blue-950/70 text-blue-300 border border-blue-900">
+             <svg aria-hidden="true" class="w-3 h-3 text-cyan-400" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z">
+              </path>
+              <path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97">
+              </path>
+             </svg>
+             Borehole
+            </span>
+            <span class="inline-flex items-center gap-1 px-2 py-0.5 text-[11px] rounded-md bg-blue-950/70 text-blue-300 border border-blue-900">
+             <svg aria-hidden="true" class="w-3 h-3 text-blue-400" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 20h.01">
+              </path>
+              <path d="M2 8.82a15 15 0 0 1 20 0">
+              </path>
+              <path d="M5 12.859a10 10 0 0 1 14 0">
+              </path>
+              <path d="M8.5 16.429a5 5 0 0 1 7 0">
+              </path>
+             </svg>
+             Wi-Fi
+            </span>
+           </div>
+           <div class="pt-2 border-t border-blue-900/40">
+            <div class="bg-blue-950/50 p-2.5 rounded-xl border border-blue-400/50 flex items-center justify-between gap-2">
+             <div class="flex items-center gap-2">
+              <div class="w-7 h-7 rounded-lg bg-blue-600 text-white flex items-center justify-center shrink-0">
+               <svg aria-hidden="true" class="w-3.5 h-3.5" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                <rect height="11" rx="2" ry="2" width="18" x="3" y="11">
+                </rect>
+                <path d="M7 11V7a5 5 0 0 1 9.9-1">
+                </path>
+               </svg>
+              </div>
+              <div class="text-left">
+               <p class="text-[11px] font-bold text-white">
+                Contact Unlocked
+               </p>
+               <p class="text-[10px] text-blue-300">
+                Tap to call or view directions
+               </p>
+              </div>
+             </div>
+             <button class="px-3 py-1.5 bg-zinc-900 hover:bg-zinc-800 text-blue-300 hover:text-white border border-blue-600/50 text-xs font-bold rounded-lg transition-all flex items-center gap-1" type="button">
+              <span>
+               View Details
+              </span>
+              <svg aria-hidden="true" class="w-3 h-3" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+               <path d="M5 12h14">
+               </path>
+               <path d="m12 5 7 7-7 7">
+               </path>
+              </svg>
+             </button>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="group relative bg-zinc-950 border border-blue-900/40 hover:border-blue-500/70 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-blue-950/60 flex flex-col cursor-pointer">
+          <div class="relative aspect-[16/10] w-full overflow-hidden bg-black">
+           <img alt="Spacious 2-in-1 Shared Bedroom with Built-in Wardrobes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/photo-4.jpg"/>
+           <div class="opacity-0 group-hover:opacity-100 transition-opacity">
+            <button class="absolute left-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/70 border border-blue-400/50 text-white flex items-center justify-center hover:bg-blue-600 transition-colors">
+             <svg aria-hidden="true" class="w-4 h-4" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="m15 18-6-6 6-6">
+              </path>
+             </svg>
+            </button>
+            <button class="absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/70 border border-blue-400/50 text-white flex items-center justify-center hover:bg-blue-600 transition-colors">
+             <svg aria-hidden="true" class="w-4 h-4" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="m9 18 6-6-6-6">
+              </path>
+             </svg>
+            </button>
+           </div>
+           <div class="absolute top-3 left-3 right-3 flex items-center justify-between pointer-events-none">
+            <div class="flex items-center gap-1.5 flex-wrap">
+             <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-semibold bg-black/80 backdrop-blur-md text-blue-300 border border-blue-500/60 shadow-md">
+              <svg aria-hidden="true" class="w-3.5 h-3.5 text-blue-400" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+               <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z">
+               </path>
+               <path d="m9 12 2 2 4-4">
+               </path>
+              </svg>
+              Verified Landlord
+             </span>
+             <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-medium bg-blue-950/90 text-blue-200 border border-blue-800/60 backdrop-blur-md">
+              Ladies Only
+             </span>
+            </div>
+            <button class="pointer-events-auto p-2 rounded-xl backdrop-blur-md transition-all bg-black/60 text-blue-300 hover:text-white hover:bg-black/80 border border-blue-900/60" title="Save to favorites" type="button">
+             <svg aria-hidden="true" class="w-4 h-4" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5">
+              </path>
+             </svg>
+            </button>
+           </div>
+           <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black via-black/70 to-transparent p-3 flex items-end justify-between">
+            <div>
+             <span class="text-xl font-black text-white drop-shadow">
+              K950
+             </span>
+             <span class="text-xs text-blue-300/90 font-medium ml-1">
+              /month
+             </span>
+            </div>
+            <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-blue-300 bg-black/70 px-2 py-0.5 rounded-md border border-blue-900/50">
+             <svg aria-hidden="true" class="w-3 h-3 text-blue-400" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0">
+              </path>
+              <circle cx="12" cy="10" r="3">
+              </circle>
+             </svg>
+             800m / 9 min walk
+            </span>
+           </div>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+           <div>
+            <div class="flex items-center justify-between text-xs text-blue-400 mb-1">
+             <span class="font-semibold uppercase tracking-wider text-[11px] truncate max-w-[200px]">
+              Copperbelt University (CBU)
+             </span>
+             <div class="flex items-center gap-1 text-amber-400 font-semibold">
+              <svg aria-hidden="true" class="w-3.5 h-3.5 fill-current" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+               <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+               </path>
+              </svg>
+              <span>
+               4.8
+              </span>
+              <span class="text-[10px] text-blue-400/80">
+               (9)
+              </span>
+             </div>
+            </div>
+            <h4 class="text-base font-bold text-white group-hover:text-blue-300 transition-colors line-clamp-1">
+             Spacious 2-in-1 Shared Bedroom with Built-in Wardrobes
+            </h4>
+            <p class="text-xs text-blue-200/80 mt-1 flex items-center gap-1">
+             <span class="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0">
+             </span>
+             <span class="truncate">
+              Kwacha East, Near St. Kizito Catholic Church
+             </span>
+            </p>
+           </div>
+           <div class="flex items-center gap-1.5 flex-wrap pt-1">
+            <span class="px-2 py-0.5 text-[11px] font-medium rounded-md bg-blue-950 text-blue-300 border border-blue-900">
+             2-in-1 Shared
+            </span>
+            <span class="inline-flex items-center gap-1 px-2 py-0.5 text-[11px] rounded-md bg-blue-950/70 text-blue-300 border border-blue-900">
+             <svg aria-hidden="true" class="w-3 h-3 text-cyan-400" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z">
+              </path>
+              <path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97">
+              </path>
+             </svg>
+             Borehole
+            </span>
+            <span class="inline-flex items-center gap-1 px-2 py-0.5 text-[11px] rounded-md bg-blue-950/70 text-blue-300 border border-blue-900">
+             <svg aria-hidden="true" class="w-3 h-3 text-blue-400" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 20h.01">
+              </path>
+              <path d="M2 8.82a15 15 0 0 1 20 0">
+              </path>
+              <path d="M5 12.859a10 10 0 0 1 14 0">
+              </path>
+              <path d="M8.5 16.429a5 5 0 0 1 7 0">
+              </path>
+             </svg>
+             Wi-Fi
+            </span>
+           </div>
+           <div class="pt-2 border-t border-blue-900/40">
+            <div class="bg-black/90 p-2.5 rounded-xl border border-blue-500/30 flex items-center justify-between gap-2">
+             <div class="flex items-center gap-2">
+              <div class="w-7 h-7 rounded-lg bg-blue-950 border border-blue-600/40 flex items-center justify-center text-blue-400 shrink-0">
+               <svg aria-hidden="true" class="w-3.5 h-3.5" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                <rect height="11" rx="2" ry="2" width="18" x="3" y="11">
+                </rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4">
+                </path>
+               </svg>
+              </div>
+              <div class="text-left">
+               <p class="text-[11px] font-bold text-white">
+                Contact &amp; Plot Hidden
+               </p>
+               <p class="text-[10px] text-blue-300/80">
+                42 students unlocked
+               </p>
+              </div>
+             </div>
+             <button class="px-3 py-1.5 bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold rounded-lg shadow-md shadow-blue-600/30 transition-all flex items-center gap-1 shrink-0" type="button">
+              <span>
+               Unlock (K25)
+              </span>
+             </button>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="group relative bg-zinc-950 border border-blue-900/40 hover:border-blue-500/70 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-blue-950/60 flex flex-col cursor-pointer">
+          <div class="relative aspect-[16/10] w-full overflow-hidden bg-black">
+           <img alt="Self-Contained Studio Flat with Private Toilet &amp; Kitchenette" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/photo-4.jpg"/>
+           <div class="opacity-0 group-hover:opacity-100 transition-opacity">
+            <button class="absolute left-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/70 border border-blue-400/50 text-white flex items-center justify-center hover:bg-blue-600 transition-colors">
+             <svg aria-hidden="true" class="w-4 h-4" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="m15 18-6-6 6-6">
+              </path>
+             </svg>
+            </button>
+            <button class="absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/70 border border-blue-400/50 text-white flex items-center justify-center hover:bg-blue-600 transition-colors">
+             <svg aria-hidden="true" class="w-4 h-4" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="m9 18 6-6-6-6">
+              </path>
+             </svg>
+            </button>
+           </div>
+           <div class="absolute top-3 left-3 right-3 flex items-center justify-between pointer-events-none">
+            <div class="flex items-center gap-1.5 flex-wrap">
+             <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-semibold bg-black/80 backdrop-blur-md text-blue-300 border border-blue-500/60 shadow-md">
+              <svg aria-hidden="true" class="w-3.5 h-3.5 text-blue-400" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+               <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z">
+               </path>
+               <path d="m9 12 2 2 4-4">
+               </path>
+              </svg>
+              Verified Landlord
+             </span>
+             <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-medium bg-blue-950/90 text-blue-200 border border-blue-800/60 backdrop-blur-md">
+              Mixed Gender
+             </span>
+            </div>
+            <button class="pointer-events-auto p-2 rounded-xl backdrop-blur-md transition-all bg-black/60 text-blue-300 hover:text-white hover:bg-black/80 border border-blue-900/60" title="Save to favorites" type="button">
+             <svg aria-hidden="true" class="w-4 h-4" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5">
+              </path>
+             </svg>
+            </button>
+           </div>
+           <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black via-black/70 to-transparent p-3 flex items-end justify-between">
+            <div>
+             <span class="text-xl font-black text-white drop-shadow">
+              K2,400
+             </span>
+             <span class="text-xs text-blue-300/90 font-medium ml-1">
+              /month
+             </span>
+            </div>
+            <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-blue-300 bg-black/70 px-2 py-0.5 rounded-md border border-blue-900/50">
+             <svg aria-hidden="true" class="w-3 h-3 text-blue-400" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0">
+              </path>
+              <circle cx="12" cy="10" r="3">
+              </circle>
+             </svg>
+             600m / 7 min walk
+            </span>
+           </div>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+           <div>
+            <div class="flex items-center justify-between text-xs text-blue-400 mb-1">
+             <span class="font-semibold uppercase tracking-wider text-[11px] truncate max-w-[200px]">
+              Copperbelt University (CBU)
+             </span>
+             <div class="flex items-center gap-1 text-amber-400 font-semibold">
+              <svg aria-hidden="true" class="w-3.5 h-3.5 fill-current" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+               <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+               </path>
+              </svg>
+              <span>
+               4.9
+              </span>
+              <span class="text-[10px] text-blue-400/80">
+               (21)
+              </span>
+             </div>
+            </div>
+            <h4 class="text-base font-bold text-white group-hover:text-blue-300 transition-colors line-clamp-1">
+             Self-Contained Studio Flat with Private Toilet &amp; Kitchenette
+            </h4>
+            <p class="text-xs text-blue-200/80 mt-1 flex items-center gap-1">
+             <span class="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0">
+             </span>
+             <span class="truncate">
+              Riverside Extension, 7 mins to CBU East Gate
+             </span>
+            </p>
+           </div>
+           <div class="flex items-center gap-1.5 flex-wrap pt-1">
+            <span class="px-2 py-0.5 text-[11px] font-medium rounded-md bg-blue-950 text-blue-300 border border-blue-900">
+             Self-Contained Studio
+            </span>
+            <span class="inline-flex items-center gap-1 px-2 py-0.5 text-[11px] rounded-md bg-blue-950/70 text-blue-300 border border-blue-900">
+             <svg aria-hidden="true" class="w-3 h-3 text-yellow-400" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z">
+              </path>
+             </svg>
+             Solar Backup
+            </span>
+            <span class="inline-flex items-center gap-1 px-2 py-0.5 text-[11px] rounded-md bg-blue-950/70 text-blue-300 border border-blue-900">
+             <svg aria-hidden="true" class="w-3 h-3 text-cyan-400" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z">
+              </path>
+              <path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97">
+              </path>
+             </svg>
+             Borehole
+            </span>
+            <span class="inline-flex items-center gap-1 px-2 py-0.5 text-[11px] rounded-md bg-blue-950/70 text-blue-300 border border-blue-900">
+             <svg aria-hidden="true" class="w-3 h-3 text-blue-400" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 20h.01">
+              </path>
+              <path d="M2 8.82a15 15 0 0 1 20 0">
+              </path>
+              <path d="M5 12.859a10 10 0 0 1 14 0">
+              </path>
+              <path d="M8.5 16.429a5 5 0 0 1 7 0">
+              </path>
+             </svg>
+             Wi-Fi
+            </span>
+           </div>
+           <div class="pt-2 border-t border-blue-900/40">
+            <div class="bg-black/90 p-2.5 rounded-xl border border-blue-500/30 flex items-center justify-between gap-2">
+             <div class="flex items-center gap-2">
+              <div class="w-7 h-7 rounded-lg bg-blue-950 border border-blue-600/40 flex items-center justify-center text-blue-400 shrink-0">
+               <svg aria-hidden="true" class="w-3.5 h-3.5" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                <rect height="11" rx="2" ry="2" width="18" x="3" y="11">
+                </rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4">
+                </path>
+               </svg>
+              </div>
+              <div class="text-left">
+               <p class="text-[11px] font-bold text-white">
+                Contact &amp; Plot Hidden
+               </p>
+               <p class="text-[10px] text-blue-300/80">
+                56 students unlocked
+               </p>
+              </div>
+             </div>
+             <button class="px-3 py-1.5 bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold rounded-lg shadow-md shadow-blue-600/30 transition-all flex items-center gap-1 shrink-0" type="button">
+              <span>
+               Unlock (K25)
+              </span>
+             </button>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="group relative bg-zinc-950 border border-blue-900/40 hover:border-blue-500/70 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-blue-950/60 flex flex-col cursor-pointer">
+          <div class="relative aspect-[16/10] w-full overflow-hidden bg-black">
+           <img alt="Budget-Friendly Bedspace in 4-Sharing Hall" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/photo-5.jpg"/>
+           <div class="opacity-0 group-hover:opacity-100 transition-opacity">
+            <button class="absolute left-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/70 border border-blue-400/50 text-white flex items-center justify-center hover:bg-blue-600 transition-colors">
+             <svg aria-hidden="true" class="w-4 h-4" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="m15 18-6-6 6-6">
+              </path>
+             </svg>
+            </button>
+            <button class="absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/70 border border-blue-400/50 text-white flex items-center justify-center hover:bg-blue-600 transition-colors">
+             <svg aria-hidden="true" class="w-4 h-4" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="m9 18 6-6-6-6">
+              </path>
+             </svg>
+            </button>
+           </div>
+           <div class="absolute top-3 left-3 right-3 flex items-center justify-between pointer-events-none">
+            <div class="flex items-center gap-1.5 flex-wrap">
+             <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-medium bg-blue-950/90 text-blue-200 border border-blue-800/60 backdrop-blur-md">
+              Men Only
+             </span>
+            </div>
+            <button class="pointer-events-auto p-2 rounded-xl backdrop-blur-md transition-all bg-black/60 text-blue-300 hover:text-white hover:bg-black/80 border border-blue-900/60" title="Save to favorites" type="button">
+             <svg aria-hidden="true" class="w-4 h-4" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5">
+              </path>
+             </svg>
+            </button>
+           </div>
+           <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black via-black/70 to-transparent p-3 flex items-end justify-between">
+            <div>
+             <span class="text-xl font-black text-white drop-shadow">
+              K650
+             </span>
+             <span class="text-xs text-blue-300/90 font-medium ml-1">
+              /month
+             </span>
+            </div>
+            <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-blue-300 bg-black/70 px-2 py-0.5 rounded-md border border-blue-900/50">
+             <svg aria-hidden="true" class="w-3 h-3 text-blue-400" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0">
+              </path>
+              <circle cx="12" cy="10" r="3">
+              </circle>
+             </svg>
+             500m / 6 min walk
+            </span>
+           </div>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+           <div>
+            <div class="flex items-center justify-between text-xs text-blue-400 mb-1">
+             <span class="font-semibold uppercase tracking-wider text-[11px] truncate max-w-[200px]">
+              Copperbelt University (CBU)
+             </span>
+             <div class="flex items-center gap-1 text-amber-400 font-semibold">
+              <svg aria-hidden="true" class="w-3.5 h-3.5 fill-current" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+               <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+               </path>
+              </svg>
+              <span>
+               4.5
+              </span>
+              <span class="text-[10px] text-blue-400/80">
+               (6)
+              </span>
+             </div>
+            </div>
+            <h4 class="text-base font-bold text-white group-hover:text-blue-300 transition-colors line-clamp-1">
+             Budget-Friendly Bedspace in 4-Sharing Hall
+            </h4>
+            <p class="text-xs text-blue-200/80 mt-1 flex items-center gap-1">
+             <span class="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0">
+             </span>
+             <span class="truncate">
+              Eastlea, Near Riverside Police Post
+             </span>
+            </p>
+           </div>
+           <div class="flex items-center gap-1.5 flex-wrap pt-1">
+            <span class="px-2 py-0.5 text-[11px] font-medium rounded-md bg-blue-950 text-blue-300 border border-blue-900">
+             4-Bed Sharing
+            </span>
+            <span class="inline-flex items-center gap-1 px-2 py-0.5 text-[11px] rounded-md bg-blue-950/70 text-blue-300 border border-blue-900">
+             <svg aria-hidden="true" class="w-3 h-3 text-cyan-400" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z">
+              </path>
+              <path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97">
+              </path>
+             </svg>
+             Borehole
+            </span>
+            <span class="inline-flex items-center gap-1 px-2 py-0.5 text-[11px] rounded-md bg-blue-950/70 text-blue-300 border border-blue-900">
+             <svg aria-hidden="true" class="w-3 h-3 text-blue-400" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 20h.01">
+              </path>
+              <path d="M2 8.82a15 15 0 0 1 20 0">
+              </path>
+              <path d="M5 12.859a10 10 0 0 1 14 0">
+              </path>
+              <path d="M8.5 16.429a5 5 0 0 1 7 0">
+              </path>
+             </svg>
+             Wi-Fi
+            </span>
+           </div>
+           <div class="pt-2 border-t border-blue-900/40">
+            <div class="bg-black/90 p-2.5 rounded-xl border border-blue-500/30 flex items-center justify-between gap-2">
+             <div class="flex items-center gap-2">
+              <div class="w-7 h-7 rounded-lg bg-blue-950 border border-blue-600/40 flex items-center justify-center text-blue-400 shrink-0">
+               <svg aria-hidden="true" class="w-3.5 h-3.5" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                <rect height="11" rx="2" ry="2" width="18" x="3" y="11">
+                </rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4">
+                </path>
+               </svg>
+              </div>
+              <div class="text-left">
+               <p class="text-[11px] font-bold text-white">
+                Contact &amp; Plot Hidden
+               </p>
+               <p class="text-[10px] text-blue-300/80">
+                19 students unlocked
+               </p>
+              </div>
+             </div>
+             <button class="px-3 py-1.5 bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold rounded-lg shadow-md shadow-blue-600/30 transition-all flex items-center gap-1 shrink-0" type="button">
+              <span>
+               Unlock (K25)
+              </span>
+             </button>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="group relative bg-zinc-950 border border-blue-900/40 hover:border-blue-500/70 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-blue-950/60 flex flex-col cursor-pointer">
+          <div class="relative aspect-[16/10] w-full overflow-hidden bg-black">
+           <img alt="Prime Single Room in Quiet Residential Cul-de-Sac" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/photo-6.jpg"/>
+           <div class="opacity-0 group-hover:opacity-100 transition-opacity">
+            <button class="absolute left-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/70 border border-blue-400/50 text-white flex items-center justify-center hover:bg-blue-600 transition-colors">
+             <svg aria-hidden="true" class="w-4 h-4" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="m15 18-6-6 6-6">
+              </path>
+             </svg>
+            </button>
+            <button class="absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/70 border border-blue-400/50 text-white flex items-center justify-center hover:bg-blue-600 transition-colors">
+             <svg aria-hidden="true" class="w-4 h-4" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="m9 18 6-6-6-6">
+              </path>
+             </svg>
+            </button>
+           </div>
+           <div class="absolute top-3 left-3 right-3 flex items-center justify-between pointer-events-none">
+            <div class="flex items-center gap-1.5 flex-wrap">
+             <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-semibold bg-black/80 backdrop-blur-md text-blue-300 border border-blue-500/60 shadow-md">
+              <svg aria-hidden="true" class="w-3.5 h-3.5 text-blue-400" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+               <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z">
+               </path>
+               <path d="m9 12 2 2 4-4">
+               </path>
+              </svg>
+              Verified Landlord
+             </span>
+             <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-medium bg-blue-950/90 text-blue-200 border border-blue-800/60 backdrop-blur-md">
+              Mixed Gender
+             </span>
+            </div>
+            <button class="pointer-events-auto p-2 rounded-xl backdrop-blur-md transition-all bg-black/60 text-blue-300 hover:text-white hover:bg-black/80 border border-blue-900/60" title="Save to favorites" type="button">
+             <svg aria-hidden="true" class="w-4 h-4" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5">
+              </path>
+             </svg>
+            </button>
+           </div>
+           <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black via-black/70 to-transparent p-3 flex items-end justify-between">
+            <div>
+             <span class="text-xl font-black text-white drop-shadow">
+              K1,400
+             </span>
+             <span class="text-xs text-blue-300/90 font-medium ml-1">
+              /month
+             </span>
+            </div>
+            <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-blue-300 bg-black/70 px-2 py-0.5 rounded-md border border-blue-900/50">
+             <svg aria-hidden="true" class="w-3 h-3 text-blue-400" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0">
+              </path>
+              <circle cx="12" cy="10" r="3">
+              </circle>
+             </svg>
+             450m / 5 min walk
+            </span>
+           </div>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+           <div>
+            <div class="flex items-center justify-between text-xs text-blue-400 mb-1">
+             <span class="font-semibold uppercase tracking-wider text-[11px] truncate max-w-[200px]">
+              Copperbelt University (CBU)
+             </span>
+             <div class="flex items-center gap-1 text-amber-400 font-semibold">
+              <svg aria-hidden="true" class="w-3.5 h-3.5 fill-current" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+               <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+               </path>
+              </svg>
+              <span>
+               5.0
+              </span>
+              <span class="text-[10px] text-blue-400/80">
+               (8)
+              </span>
+             </div>
+            </div>
+            <h4 class="text-base font-bold text-white group-hover:text-blue-300 transition-colors line-clamp-1">
+             Prime Single Room in Quiet Residential Cul-de-Sac
+            </h4>
+            <p class="text-xs text-blue-200/80 mt-1 flex items-center gap-1">
+             <span class="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0">
+             </span>
+             <span class="truncate">
+              Parklands, 5 mins from CBU Main Campus
+             </span>
+            </p>
+           </div>
+           <div class="flex items-center gap-1.5 flex-wrap pt-1">
+            <span class="px-2 py-0.5 text-[11px] font-medium rounded-md bg-blue-950 text-blue-300 border border-blue-900">
+             Single Room
+            </span>
+            <span class="inline-flex items-center gap-1 px-2 py-0.5 text-[11px] rounded-md bg-blue-950/70 text-blue-300 border border-blue-900">
+             <svg aria-hidden="true" class="w-3 h-3 text-yellow-400" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z">
+              </path>
+             </svg>
+             Solar Backup
+            </span>
+            <span class="inline-flex items-center gap-1 px-2 py-0.5 text-[11px] rounded-md bg-blue-950/70 text-blue-300 border border-blue-900">
+             <svg aria-hidden="true" class="w-3 h-3 text-cyan-400" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z">
+              </path>
+              <path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97">
+              </path>
+             </svg>
+             Borehole
+            </span>
+            <span class="inline-flex items-center gap-1 px-2 py-0.5 text-[11px] rounded-md bg-blue-950/70 text-blue-300 border border-blue-900">
+             <svg aria-hidden="true" class="w-3 h-3 text-blue-400" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 20h.01">
+              </path>
+              <path d="M2 8.82a15 15 0 0 1 20 0">
+              </path>
+              <path d="M5 12.859a10 10 0 0 1 14 0">
+              </path>
+              <path d="M8.5 16.429a5 5 0 0 1 7 0">
+              </path>
+             </svg>
+             Wi-Fi
+            </span>
+           </div>
+           <div class="pt-2 border-t border-blue-900/40">
+            <div class="bg-black/90 p-2.5 rounded-xl border border-blue-500/30 flex items-center justify-between gap-2">
+             <div class="flex items-center gap-2">
+              <div class="w-7 h-7 rounded-lg bg-blue-950 border border-blue-600/40 flex items-center justify-center text-blue-400 shrink-0">
+               <svg aria-hidden="true" class="w-3.5 h-3.5" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                <rect height="11" rx="2" ry="2" width="18" x="3" y="11">
+                </rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4">
+                </path>
+               </svg>
+              </div>
+              <div class="text-left">
+               <p class="text-[11px] font-bold text-white">
+                Contact &amp; Plot Hidden
+               </p>
+               <p class="text-[10px] text-blue-300/80">
+                31 students unlocked
+               </p>
+              </div>
+             </div>
+             <button class="px-3 py-1.5 bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold rounded-lg shadow-md shadow-blue-600/30 transition-all flex items-center gap-1 shrink-0" type="button">
+              <span>
+               Unlock (K25)
+              </span>
+             </button>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="group relative bg-zinc-950 border border-blue-900/40 hover:border-blue-500/70 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-blue-950/60 flex flex-col cursor-pointer">
+          <div class="relative aspect-[16/10] w-full overflow-hidden bg-black">
+           <img alt="Brand New Self-Contained 1-Bed Apartment" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/photo-4.jpg"/>
+           <div class="opacity-0 group-hover:opacity-100 transition-opacity">
+            <button class="absolute left-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/70 border border-blue-400/50 text-white flex items-center justify-center hover:bg-blue-600 transition-colors">
+             <svg aria-hidden="true" class="w-4 h-4" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="m15 18-6-6 6-6">
+              </path>
+             </svg>
+            </button>
+            <button class="absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/70 border border-blue-400/50 text-white flex items-center justify-center hover:bg-blue-600 transition-colors">
+             <svg aria-hidden="true" class="w-4 h-4" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="m9 18 6-6-6-6">
+              </path>
+             </svg>
+            </button>
+           </div>
+           <div class="absolute top-3 left-3 right-3 flex items-center justify-between pointer-events-none">
+            <div class="flex items-center gap-1.5 flex-wrap">
+             <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-semibold bg-black/80 backdrop-blur-md text-blue-300 border border-blue-500/60 shadow-md">
+              <svg aria-hidden="true" class="w-3.5 h-3.5 text-blue-400" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+               <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z">
+               </path>
+               <path d="m9 12 2 2 4-4">
+               </path>
+              </svg>
+              Verified Landlord
+             </span>
+             <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-medium bg-blue-950/90 text-blue-200 border border-blue-800/60 backdrop-blur-md">
+              Mixed Gender
+             </span>
+            </div>
+            <button class="pointer-events-auto p-2 rounded-xl backdrop-blur-md transition-all bg-black/60 text-blue-300 hover:text-white hover:bg-black/80 border border-blue-900/60" title="Save to favorites" type="button">
+             <svg aria-hidden="true" class="w-4 h-4" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5">
+              </path>
+             </svg>
+            </button>
+           </div>
+           <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black via-black/70 to-transparent p-3 flex items-end justify-between">
+            <div>
+             <span class="text-xl font-black text-white drop-shadow">
+              K2,600
+             </span>
+             <span class="text-xs text-blue-300/90 font-medium ml-1">
+              /month
+             </span>
+            </div>
+            <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-blue-300 bg-black/70 px-2 py-0.5 rounded-md border border-blue-900/50">
+             <svg aria-hidden="true" class="w-3 h-3 text-blue-400" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0">
+              </path>
+              <circle cx="12" cy="10" r="3">
+              </circle>
+             </svg>
+             300m / 3 min walk
+            </span>
+           </div>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+           <div>
+            <div class="flex items-center justify-between text-xs text-blue-400 mb-1">
+             <span class="font-semibold uppercase tracking-wider text-[11px] truncate max-w-[200px]">
+              Copperbelt University (CBU)
+             </span>
+             <div class="flex items-center gap-1 text-amber-400 font-semibold">
+              <svg aria-hidden="true" class="w-3.5 h-3.5 fill-current" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+               <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+               </path>
+              </svg>
+              <span>
+               4.7
+              </span>
+              <span class="text-[10px] text-blue-400/80">
+               (5)
+              </span>
+             </div>
+            </div>
+            <h4 class="text-base font-bold text-white group-hover:text-blue-300 transition-colors line-clamp-1">
+             Brand New Self-Contained 1-Bed Apartment
+            </h4>
+            <p class="text-xs text-blue-200/80 mt-1 flex items-center gap-1">
+             <span class="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0">
+             </span>
+             <span class="truncate">
+              Nkana East, Near CBU Medical Campus
+             </span>
+            </p>
+           </div>
+           <div class="flex items-center gap-1.5 flex-wrap pt-1">
+            <span class="px-2 py-0.5 text-[11px] font-medium rounded-md bg-blue-950 text-blue-300 border border-blue-900">
+             Self-Contained Studio
+            </span>
+            <span class="inline-flex items-center gap-1 px-2 py-0.5 text-[11px] rounded-md bg-blue-950/70 text-blue-300 border border-blue-900">
+             <svg aria-hidden="true" class="w-3 h-3 text-yellow-400" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z">
+              </path>
+             </svg>
+             Solar Backup
+            </span>
+            <span class="inline-flex items-center gap-1 px-2 py-0.5 text-[11px] rounded-md bg-blue-950/70 text-blue-300 border border-blue-900">
+             <svg aria-hidden="true" class="w-3 h-3 text-cyan-400" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z">
+              </path>
+              <path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97">
+              </path>
+             </svg>
+             Borehole
+            </span>
+            <span class="inline-flex items-center gap-1 px-2 py-0.5 text-[11px] rounded-md bg-blue-950/70 text-blue-300 border border-blue-900">
+             <svg aria-hidden="true" class="w-3 h-3 text-blue-400" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 20h.01">
+              </path>
+              <path d="M2 8.82a15 15 0 0 1 20 0">
+              </path>
+              <path d="M5 12.859a10 10 0 0 1 14 0">
+              </path>
+              <path d="M8.5 16.429a5 5 0 0 1 7 0">
+              </path>
+             </svg>
+             Wi-Fi
+            </span>
+           </div>
+           <div class="pt-2 border-t border-blue-900/40">
+            <div class="bg-black/90 p-2.5 rounded-xl border border-blue-500/30 flex items-center justify-between gap-2">
+             <div class="flex items-center gap-2">
+              <div class="w-7 h-7 rounded-lg bg-blue-950 border border-blue-600/40 flex items-center justify-center text-blue-400 shrink-0">
+               <svg aria-hidden="true" class="w-3.5 h-3.5" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                <rect height="11" rx="2" ry="2" width="18" x="3" y="11">
+                </rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4">
+                </path>
+               </svg>
+              </div>
+              <div class="text-left">
+               <p class="text-[11px] font-bold text-white">
+                Contact &amp; Plot Hidden
+               </p>
+               <p class="text-[10px] text-blue-300/80">
+                22 students unlocked
+               </p>
+              </div>
+             </div>
+             <button class="px-3 py-1.5 bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold rounded-lg shadow-md shadow-blue-600/30 transition-all flex items-center gap-1 shrink-0" type="button">
+              <span>
+               Unlock (K25)
+              </span>
+             </button>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </section>
+       <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4">
+        <div class="bg-gradient-to-b from-blue-950/40 via-zinc-950 to-black border border-blue-800/40 rounded-3xl p-6 sm:p-8">
+         <div class="text-center max-w-xl mx-auto mb-8">
+          <span class="text-xs font-bold uppercase tracking-wider text-blue-400">
+           Safe &amp; Scam-Free Process
+          </span>
+          <h3 class="text-2xl font-black text-white mt-1">
+           How UniNest CBU Agent Works
+          </h3>
+          <p class="text-xs text-blue-300 mt-1">
+           Built to protect CBU students from fake middlemen and avoid wasted trips.
+          </p>
+         </div>
+         <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <div class="bg-black/60 p-5 rounded-2xl border border-blue-900/40 text-center space-y-2">
+           <div class="w-10 h-10 rounded-xl bg-blue-950 border border-blue-500/40 text-blue-400 font-black text-sm flex items-center justify-center mx-auto">
+            1
+           </div>
+           <h4 class="text-sm font-bold text-white">
+            Browse Safe Info
+           </h4>
+           <p class="text-xs text-blue-300/80">
+            View photos, amenities, backup solar, distance to campus, and safe general area without fake broker spam.
+           </p>
+          </div>
+          <div class="bg-black/60 p-5 rounded-2xl border border-blue-900/40 text-center space-y-2">
+           <div class="w-10 h-10 rounded-xl bg-blue-950 border border-blue-500/40 text-blue-400 font-black text-sm flex items-center justify-center mx-auto">
+            2
+           </div>
+           <h4 class="text-sm font-bold text-white">
+            Unlock Contact
+           </h4>
+           <p class="text-xs text-blue-300/80">
+            Pay the small K25 agent verification fee via MTN MoMo or Airtel Money for the exact listing.
+           </p>
+          </div>
+          <div class="bg-black/60 p-5 rounded-2xl border border-blue-900/40 text-center space-y-2">
+           <div class="w-10 h-10 rounded-xl bg-blue-950 border border-blue-500/40 text-blue-400 font-black text-sm flex items-center justify-center mx-auto">
+            3
+           </div>
+           <h4 class="text-sm font-bold text-white">
+            Direct WhatsApp
+           </h4>
+           <p class="text-xs text-blue-300/80">
+            Receive the landlord's verified phone, exact plot number, caretaker instructions, and map directions.
+           </p>
+          </div>
+          <div class="bg-black/60 p-5 rounded-2xl border border-blue-900/40 text-center space-y-2">
+           <div class="w-10 h-10 rounded-xl bg-blue-950 border border-blue-500/40 text-blue-400 font-black text-sm flex items-center justify-center mx-auto">
+            4
+           </div>
+           <h4 class="text-sm font-bold text-white">
+            Inspect Before Paying
+           </h4>
+           <p class="text-xs text-blue-300/80">
+            Visit the boarding house physically and inspect the room before paying any rent to the landlord.
+           </p>
+          </div>
+         </div>
+        </div>
+       </section>
+      </div>
+     </main>
     </div>
-    
-  
-
-</body></html>
+   </div>
+   <!-- Static footer: this footer has no application state and belongs in HTML. -->
+   <footer class="bg-black border-t border-blue-900/40 py-12 text-blue-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+      <div class="space-y-3">
+       <div class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-lg bg-blue-600 text-white flex items-center justify-center font-bold">
+         <svg aria-hidden="true" class="w-4 h-4" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="m2 21 9.6-9.6">
+          </path>
+          <path d="m7.5 15.5 2.3 2.3a1 1 0 0 1 0 1.4l-2.1 2.1a1 1 0 0 1-1.4 0L4 19">
+          </path>
+          <circle cx="15.5" cy="7.5" r="5.5">
+          </circle>
+         </svg>
+        </div>
+        <span class="text-xl font-black text-white">
+         Uni
+         <span class="text-blue-500">
+          Nest
+         </span>
+        </span>
+       </div>
+       <p class="text-xs text-blue-300/80 leading-relaxed">
+        Zambia's verified university boarding house discovery platform. Protecting students through transparent room specs and scam-free landlord contact unlocking.
+       </p>
+       <div class="flex items-center gap-2 text-xs text-blue-400">
+        <svg aria-hidden="true" class="w-4 h-4 text-blue-400" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+         <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z">
+         </path>
+         <path d="m9 12 2 2 4-4">
+         </path>
+        </svg>
+        <span>
+         Verified Agent License #ZM-BH-2026
+        </span>
+       </div>
+      </div>
+      <div class="space-y-2 text-xs">
+       <h4 class="font-bold text-white uppercase tracking-wider text-[11px] text-blue-400">
+        CBU Boarding Zones
+       </h4>
+       <ul class="space-y-1.5 text-blue-200/80">
+        <li>
+         &bull; Riverside (CBU West &amp; East Gates)
+        </li>
+        <li>
+         &bull; Kwacha East &amp; St. Kizito area
+        </li>
+        <li>
+         &bull; Eastlea &amp; Riverside Extension
+        </li>
+        <li>
+         &bull; Parklands &amp; Nkana East (CBU Medical)
+        </li>
+       </ul>
+      </div>
+      <div class="space-y-2 text-xs">
+       <h4 class="font-bold text-white uppercase tracking-wider text-[11px] text-blue-400">
+        Student Safety Rules
+       </h4>
+       <ul class="space-y-1.5 text-blue-200/80">
+        <li>
+         &checkmark; Inspect the room physically before paying any rent
+        </li>
+        <li>
+         &checkmark; Demand a written tenancy agreement and receipt
+        </li>
+        <li>
+         &checkmark; Verify solar backup &amp; borehole water on site
+        </li>
+        <li>
+         &checkmark; Report fraudulent or occupied rooms for a fee refund
+        </li>
+       </ul>
+      </div>
+      <div class="space-y-3 text-xs">
+       <h4 class="font-bold text-white uppercase tracking-wider text-[11px] text-blue-400">
+        Agent Support Line
+       </h4>
+       <p class="text-blue-200/80">
+        Have questions or need manual verification of a boarding house?
+       </p>
+       <div class="flex flex-col gap-2">
+        <button class="inline-flex items-center gap-2 px-3 py-2 bg-blue-950 hover:bg-blue-900 border border-blue-700/60 text-blue-200 rounded-xl transition-colors font-medium" rel="noopener noreferrer" target="_blank" type="button">
+         <svg aria-hidden="true" class="w-3.5 h-3.5 text-emerald-400" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z">
+          </path>
+         </svg>
+         <span>
+          Agent WhatsApp: +260 97 999 0000
+         </span>
+        </button>
+        <button class="inline-flex items-center gap-2 px-3 py-2 bg-blue-950 hover:bg-blue-900 border border-blue-700/60 text-blue-200 rounded-xl transition-colors font-medium" type="button">
+         <svg aria-hidden="true" class="w-3.5 h-3.5 text-blue-400" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384">
+          </path>
+         </svg>
+         <span>
+          Direct Hotline: +260 97 999 0000
+         </span>
+        </button>
+       </div>
+      </div>
+     </div>
+     <div class="pt-8 border-t border-blue-950 flex flex-col sm:flex-row items-center justify-between text-xs text-blue-400/70 gap-3">
+      <p>
+       &copy; 2026 UniNest Boarding House Services. All rights reserved.
+      </p>
+      <p class="flex items-center gap-1">
+       <span>
+        Theme: Deep Black &amp; Electric Blue
+       </span>
+       <span>
+        &bull; Powered by UniNest Agent Engine
+       </span>
+      </p>
+     </div>
+    </div>
+   </footer>
+   <noscript>
+    <main class="min-h-screen bg-black text-white flex items-center justify-center p-6 text-center">
+     <p>
+      UniNest needs JavaScript enabled to provide listings, role switching, filters, payments, and contact unlocking.
+     </p>
+    </main>
+   </noscript>
+  </div>
+ </body>
+</html>
