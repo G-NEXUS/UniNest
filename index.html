@@ -1,22 +1,22 @@
 <!doctype html>
-<html lang="en" class="dark">
+<html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UniNest - Boarding House Agent & Room Unlock</title>
-    <meta name="description" content="Student boarding house discovery and verification platform with secure landlord contact unlocking, agent verification, and student accommodation listings." />
-    <meta property="og:title" content="UniNest - Boarding House Agent & Room Unlock" />
-    <meta property="og:description" content="Student boarding house discovery and verification platform with secure landlord contact unlocking, agent verification, and student accommodation listings." />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="theme-color" content="#000000" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Discover verified student boarding houses near Copperbelt University and unlock landlord contact details.">
+    <meta name="theme-color" content="#030712">
+    <title>UniNest — CBU Boarding House Agent</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    
   </head>
-  <body class="bg-black text-blue-50 selection:bg-blue-600 selection:text-white min-h-screen">
-    <div id="root"></div>
-    <script type="module" src="./src/main.jsx"></script>
+  <body>
+    <!-- The page shell provides stable semantic regions for every role-based view. -->
+    <header id="site-header" class="site-header"></header>
+    <main id="app-main" class="app-main" tabindex="-1"></main>
+    <footer id="site-footer" class="site-footer"></footer>
+    <section id="modal-root" aria-live="polite" aria-label="Dialogs"></section>
+    <div id="toast-root" class="toast-root" aria-live="polite" aria-atomic="true"></div>
+    <script type="module" src="./js/logic.js"></script>
   </body>
 </html>
 
