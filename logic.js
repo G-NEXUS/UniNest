@@ -2322,7 +2322,7 @@ function resetDemoData() {
   state.reviews = clone(INITIAL_REVIEWS);
   state.favoritesByUser = {};
   state.tenants = clone(INITIAL_TENANTS);
-  state.agentFee = 25;
+  state.agentFee = 250;
   state.modal = null;
   state.menuOpen = false;
   state.search = "";
